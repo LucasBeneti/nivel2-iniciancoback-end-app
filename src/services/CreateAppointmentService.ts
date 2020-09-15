@@ -11,7 +11,7 @@ interface Request {
 }
 
 class CreateAppointmentService {
-    public async execute({ provider_id, date }: Request): Promise<Appointment> {
+    public async execute({ date, provider_id }: Request): Promise<Appointment> {
         const appointmentsRepository = getCustomRepository(
             AppointmentsRepository,
         );
